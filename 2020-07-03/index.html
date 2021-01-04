@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>PHPのふぉーむ</title>
+</head>
+
+<body style="text-align: center;">
+    <h2>構成設定</h2>
+
+    <form action="get.php" method="POST">
+        <p>ホスト名：<input type="text" name="name" value="" /></p>
+        <p>IPアドレス：<input type="text" name="ip" value="" /></p>
+        <p>電源：
+            <input type="radio" name="power" value="F">フルパワー</input>
+            <input type="radio" name="power" value="B" checked>バランス</input>
+            <input type="radio" name="power" value="E">エコ</input>
+        </p>
+        <p>冷却：
+            <input type="radio" name="cool" value="H">ハイ</input>
+            <input type="radio" name="cool" value="M" checked>ミドル</input>
+            <input type="radio" name="cool" value="L">ロー</input>
+        </p>
+        <p>使用FAN：
+            <input type="checkbox" name="fan[]" value="fan1" checked />FAN1&nbsp;
+            <input type="checkbox" name="fan[]" value="fan2" checked />FAN2&nbsp;
+            <input type="checkbox" name="fan[]" value="fan3" checked />FAN3&nbsp;
+            <input type="checkbox" name="fan[]" value="fan4" checked />FAN4&nbsp;
+            <input type="checkbox" name="fan[]" value="fan5" checked />FAN5&nbsp;
+            <input type="checkbox" name="fan[]" value="fan6" checked />FAN6&nbsp;
+            <input type="checkbox" name="fan[]" value="fan7" checked />FAN7&nbsp;
+            <input type="checkbox" name="fan[]" value="fan8" checked />FAN8&nbsp;
+        </p>
+        <p>KVM利用：
+            <select name="kvmForm">
+                <option value="1">する</option>
+                <option value="2">しない</option>
+            </select>
+        </p>
+        <p>テーマカラー:
+            <input type="color" name="color" value="#ffffff" />
+        </p>
+
+        <p>
+            <input type="submit" value="送信する" />
+            <input type="reset" value="リセット" />
+        </p>
+    </form>
+</body>
